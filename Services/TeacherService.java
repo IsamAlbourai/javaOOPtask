@@ -34,7 +34,7 @@ public class TeacherService {
 
         teacher.setCourseList(courseService.addNewCourses());
 
-        teacherList.add(teacher); // ✅ store teacher
+        teacherList.add(teacher);
 
         return teacher;
     }

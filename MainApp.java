@@ -2,6 +2,7 @@ package ObjectOrientedProgramming.OOPDemo;
 
 import ObjectOrientedProgramming.OOPDemo.Menu.Menu;
 import ObjectOrientedProgramming.OOPDemo.Services.*;
+import ObjectOrientedProgramming.OOPDemo.Utils.MenuMessages;
 
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public class MainApp {
         TeacherService teacherService = new TeacherService();
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
+        MenuMessages menuMessages = new MenuMessages();
 
         boolean mainMenuContinue = true;
 
@@ -24,7 +26,7 @@ public class MainApp {
             menu.displayMenu();
 
             int option = input.nextInt();
-            input.nextLine(); // ✅ FIX buffer issue
+            input.nextLine();
 
             switch (option) {
 
@@ -33,8 +35,8 @@ public class MainApp {
                     boolean uniMenuContinue = true;
                     while (uniMenuContinue) {
                         System.out.println(" *********** University Menu ***********");
-                        int universityOption = input.nextInt();
-                        input.nextLine();
+                        System.out.println(MenuMessages.UNIVERSITY_MENU_MESSAGE);
+                        Integer universityOption = input.nextInt();
                         uniMenuContinue = universityService.handleUniversityMenu(universityOption);
                     }
                 }

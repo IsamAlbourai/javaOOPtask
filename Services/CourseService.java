@@ -28,7 +28,7 @@ public class CourseService {
         String courseCode = scanner.nextLine();
         course.setCourseCode(courseCode);
 
-        courseList.add(course); // ✅ store it
+        courseList.add(course); //  store it
 
         return course;
     }

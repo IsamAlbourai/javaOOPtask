@@ -26,7 +26,7 @@ public class StudentService {
 
         System.out.println("Enter student Name: ");
         String stdName = scanner.nextLine();
-        student.setName(stdName); // ✅ FIXED
+        student.setName(stdName);
 
         System.out.println("Departments List");
         UniversityService.university.displayDepartments();
@@ -36,7 +36,7 @@ public class StudentService {
 
         student.setCourseList(student.getDepartment().getOfferedCourses());
 
-        studentsList.add(student); // ✅ store student
+        studentsList.add(student); // store student
 
         return student;
     }

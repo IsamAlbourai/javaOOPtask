@@ -28,7 +28,7 @@ public class DepartmentService {
 
         department.setOfferedCourses(courseService.addNewCourses());
 
-        departmentList.add(department); // ✅ store it
+        departmentList.add(department); // store it
 
         return department;
     }
